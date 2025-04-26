@@ -16,13 +16,16 @@ Else
  
 Program:
 ```
-#include<stdio.h> struct eligib
+#include<stdio.h>
+ struct eligib
 {
-int age; char n[4];
+int age;
+char n[4];
 };
 int main()
 {
-struct eligib e; scanf("%d%s",&e.age,e.n);
+struct eligib e;
+ scanf("%d%s",&e.age,e.n);
 if(e.age<=6)
 {
 printf("Age:%d\nName:%svaccine:%d\neligibility:no",e.age,e.n,e.age);
@@ -42,10 +45,13 @@ printf("Age:%d\nName:%svaccine:%d\neligibility:yes",e.age,e.n,e.age);
 
 
 Output:
+
+
 <img width="274" alt="image" src="https://github.com/user-attachments/assets/2d68aa4e-fd60-4e7c-a2aa-808c53ab31ae" />
 
 
 Result:
+
 Thus, the program is verified successfully. 
 
 
@@ -64,12 +70,16 @@ Algorithm:
 7.	Return 0
  
 Program:
+
 ```
-#include<stdio.h> struct numbers
+#include<stdio.h>
+ struct numbers
 {
-int a; int b;
+int a;
+ int b;
 }n;
-int add(struct numbers n); int main()
+int add(struct numbers n);
+ int main()
 {
 
 scanf("%d %d ",&n.a,&n.b);
@@ -86,9 +96,12 @@ return n.a+n.b;
 
 
 Output:
+
+
 <img width="94" alt="image" src="https://github.com/user-attachments/assets/8de8d6d2-9e50-464e-91f8-9550f57c76aa" />
 
 Result:
+
 Thus, the program is verified successfully
 
 
@@ -117,12 +130,16 @@ Use scanf to input the file name into the name array.
  
 Program:
 ```
-#include <stdio.h> int main()
+#include <stdio.h>
+int main()
 {
 FILE *p;
-char name[30]; scanf("%s",name);
-printf("%s File Created Successfully",name); p=fopen("name","w");
-printf("\n%s File Opened",name); fclose(p);
+char name[30];
+ scanf("%s",name);
+printf("%s File Created Successfully",name);
+p=fopen("name","w");
+printf("\n%s File Opened",name);
+fclose(p);
 printf("\n%s File Closed",name);
 }
 
@@ -137,11 +154,13 @@ Output:
 
 
 Result:
+
 Thus, the program is verified successfully
  
 
 
 EXP NO:4   PROGRAM TO READ A FILE NAME FROM USER, WRITE THAT FILE AND INSERT TEXT IN TO THAT FILE
+
 Aim:
 To write a C program to read, a file and insert text in that file
 Algorithm:
@@ -165,11 +184,17 @@ Program:
 
 ```
 
-#include <stdio.h> int main()
+#include <stdio.h>
+int main()
 {
 FILE *p;
-char name[20]; int num;
-char text[50]; scanf("%s%d",name,&num); p=fopen("name","w"); printf("%s Opened",name); for(int i=0;i<num;i++)
+char name[20];
+ int num;
+char text[50];
+scanf("%s%d",name,&num);
+ p=fopen("name","w");
+printf("%s Opened",name);
+ for(int i=0;i<num;i++)
 {
 scanf("%s",text); fputs(text,p);
 }
@@ -183,10 +208,13 @@ printf("\nData added Successfully");
 
 
 Output:
+
+
 <img width="233" alt="image" src="https://github.com/user-attachments/assets/5b359def-44a9-4a4c-9853-2b5c2572fca9" />
 
 
 Result:
+
 Thus, the program is verified successfully
 
 
@@ -260,6 +288,8 @@ int main()
 ```
 
 Output:
+
+
 <img width="172" alt="image" src="https://github.com/user-attachments/assets/d45848a0-96ca-475e-8d5d-e4f970059c70" />
 
 
@@ -268,4 +298,5 @@ Output:
 
 
 Result:
+
 Thus, the program is verified successfully
