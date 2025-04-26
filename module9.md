@@ -2,6 +2,7 @@ EXP NO:11 C PROGRAM TO DISPLAY STACK ELEMENTS USING AN ARRAY.
 
 Aim:
 To write a C program to display stack elements using an array.
+
 Algorithm:
 1.	Include Necessary Header Files
 2.	Declare Global Variables
@@ -13,7 +14,8 @@ Algorithm:
  
 Program:
 ```
-int stack[40],top,i; void display()
+int stack[40],top,i;
+void display()
 {
 for(i=top;i>=0;i--)
 {
@@ -32,10 +34,12 @@ Output:
 
 
 Result:
+
 Thus, the program to display stack elements using an array is verified successfully.
  
 
 EXP NO:12  PROGRAM TO PUSH THE GIVEN ELEMENT IN TO A STACK USING ARRAY.
+
 Aim:
 To create a C program to push the given element in to a stack using array.
 Algorithm:
@@ -46,7 +50,8 @@ Algorithm:
  
 Program:
 ```
-int size=3,top=1; float stack[40];
+int size=3,top=1;
+float stack[40];
 void push (float data)
 {
 if (top==size-1 )
@@ -55,13 +60,16 @@ printf("stack is full\n");
 }
 else
 {
-top ++; stack[top] = data;
+top ++;
+ stack[top] = data;
 }
 }
 
 ```
 
 Output:
+
+
 <img width="164" alt="image" src="https://github.com/user-attachments/assets/5c58d02c-9016-4972-878a-83091467cd87" />
 
 
@@ -69,11 +77,13 @@ Output:
 
 
 Result:
+
 Thus, the program to push the given element in to a stack using array is verified successfully
 
 
  
 EXP NO:13 C PROGRAM TO DISPLAY QUEUE ELEMENTS USING ARRAY.
+
 Aim:
 To write a C program to display queue elements using array
 
@@ -85,7 +95,8 @@ Algorithm:
  
 Program:
 ```
-int queue[50], rear, front,i; void display()
+int queue[50], rear, front,i;
+ void display()
 {
 if(front==-1)
 {
@@ -102,15 +113,19 @@ printf("%d ",queue[i]);
 
 ```
 Output:
+
+
 <img width="178" alt="image" src="https://github.com/user-attachments/assets/8da605c1-e358-47be-af1a-378c48c5b37b" />
 
 
 Result:
+
 Thus, the program to display queue elements using array is verified successfully.
 
 
  
 EXP NO:14 C PROGRAM TO INSERT ELEMENTS IN QUEUE USING ARRAY.
+
 Aim:
 To write a C program to insert elements in queue using array.
 
@@ -123,7 +138,8 @@ Algorithm:
 Program:
 ```
 Program:
-int size=4, rear=-1, front=-1; float queue[50];
+int size=4, rear=-1, front=-1;
+float queue[50];
 void enqueue(float data)
 {
 if(rear<size)
@@ -139,10 +155,13 @@ rear=rear+1; queue[rear]=data;
 ```
 
 Output:
+
+
 <img width="202" alt="image" src="https://github.com/user-attachments/assets/5fd9163d-9ff7-4d63-93bd-b76878012182" />
 
 
 Result:
+
 Thus, the program to insert elements in queue using array is verified successfully.
 
 
@@ -193,4 +212,5 @@ Output:
 
 
 Result:
+
 Thus, the function that deletes an element from a queue implemented using an array is verified successfully.
