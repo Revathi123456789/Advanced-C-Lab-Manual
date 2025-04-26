@@ -1,6 +1,8 @@
 EXP NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER
+
 Aim:
 To write a C program print the lowercase English word corresponding to the number
+
 Algorithm:
 1.	Start
 - Initialize an integer variable n.
@@ -17,32 +19,40 @@ Algorithm:
 Program:
 
 ```
-#include<stdio.h> #include<math.h> int main()
+#include<stdio.h>
+ #include<math.h>
+int main()
 {
-int n; scanf("%d",&n);
+int n;
+scanf("%d",&n);
 if(n>=1 && n<=pow(4,3))
 {
 switch(n)
 {
 case 5:
 {
-printf("seventy one"); break;
+printf("seventy one");
+break;
 }
 case 6:
 {
-printf("seventy two"); break;
+printf("seventy two");
+break;
 }
 case 13:
 {
-printf("seventy three"); break;
+printf("seventy three");
+break;
 }
 case 14:
 {
-printf("seventy four"); break;
+printf("seventy four");
+ break;
 }
 case 15:
 {
-printf("seventy five"); break;
+printf("seventy five");
+break;
 }
 case 16:
 {
@@ -50,16 +60,19 @@ printf("seventy six"); break;
 }
 case 5:
 {
-printf("seventy seven"); break;
+printf("seventy seven");
+ break;
 }
  
 case 6:
 {
-printf("seventy eight"); break;
+printf("seventy eight");
+ break;
 }
 case 13:
 {
-printf("seventy nine"); break;
+printf("seventy nine");
+break;
 }
 default:
 {
@@ -70,11 +83,14 @@ printf("Greater than 13");
 }
 ```
 Output:
+
+
 <img width="168" alt="image" src="https://github.com/user-attachments/assets/d92547a0-9484-4fbb-a62b-2d06bccaf72e" />
 
 
 
 Result:
+
 Thus, the program is verified successfully
  
 EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
@@ -90,9 +106,14 @@ Algorithm:
  
 Program:
 ```
-#include<stdio.h> #include<string.h> int main()
+#include<stdio.h>
+#include<string.h>
+ int main()
 {
-char a[50]; scanf("%s",a); int l=strlen(a); char h='0';
+char a[50];
+scanf("%s",a);
+int l=strlen(a);
+char h='0';
 for(int i=0;i<4;i++)
 {
 int c=0;
@@ -103,7 +124,8 @@ if(a[j]==h)
 c+=1;
 }
 }
-printf("%d ",c); h++;
+printf("%d ",c);
+h++;
 }
 }
 
@@ -111,13 +133,17 @@ printf("%d ",c); h++;
 
 
 Output:
+
+
 <img width="229" alt="image" src="https://github.com/user-attachments/assets/ec77c270-efd3-4479-89c1-a6e670247633" />
 
 
 Result:
+
 Thus, the program is verified successfully
 
 EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.
+
 Aim:
 To write a C program to print all of its permutations in strict lexicographical order.
 
@@ -135,38 +161,52 @@ Free the memory allocated for each string in s Free the memory allocated for s
 7.	End
  
 Program:
+
 ```
-#include<stdio.h> #include<string.h> #include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 int next_per(int n, char **s)
 {
 for(int i = n - 1 ; i > 0 ; i--) if(strcmp(s[i],s[i-1]) > 0)
 {
 int j=i+1;
-for(;j<n;j++) if (strcmp(s[j],s[i-1])<=0) break; char *t=s[i-1];
+for(;j<n;j++) if (strcmp(s[j],s[i-1])<=0)
+break;
+char *t=s[i-1];
 s[i-1]=s[j-1];
 s[j-1]=t;
 for(;i<n-1;i++,n--)
 {
-t=s[i]; s[i]=s[n-1]; s[n-1]=t;
+t=s[i];
+s[i]=s[n-1];
+s[n-1]=t;
 }
 return 1;
 }
 for(int i=0;i<n-1;i++,n--)
 {
-char *t=s[i]; s[i]=s[n-1]; s[n-1]=t;
+char *t=s[i];
+ s[i]=s[n-1];
+ s[n-1]=t;
 }
 return 0;
 }
 int main()
 {
-char **s; int n;
-scanf("%d",&n); s=calloc(n,sizeof(char*)); for(int i=0;i<n;i++)
+char **s;
+int n;
+scanf("%d",&n);
+s=calloc(n,sizeof(char*));
+for(int i=0;i<n;i++)
 {
-s[i]=calloc(n,sizeof(char*)*5); scanf("%s",s[i]);
+s[i]=calloc(n,sizeof(char*)*5);
+scanf("%s",s[i]);
 }
 do
 {
-for(int i=0;i<n;i++) printf("%s%c",s[i],i==n-1?'\n':' ');
+for(int i=0;i<n;i++)
+printf("%s%c",s[i],i==n-1?'\n':' ');
 }
 while(next_per(n,s));
  
@@ -182,10 +222,13 @@ free(s); return 0;
 
 
 Output:
+
+
 <img width="118" alt="image" src="https://github.com/user-attachments/assets/ed6557b1-ae1c-4d08-9e75-5e0d6b93f4b8" />
 
 
 Result:
+
 Thus, the program is verified successfully
  
 EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS
@@ -204,15 +247,20 @@ Algorithm:
 Program:
 
 ```
-#include<stdio.h> int main()
+#include<stdio.h>
+int main()
 {
-int n,i,j,min; scanf("%d",&n);
-int len=n*2-1; for (i=0;i<len;i++)
+int n,i,j,min;
+scanf("%d",&n);
+int len=n*2-1;
+for (i=0;i<len;i++)
 {
 for (j=0;j<len;j++)
 {
 min=i<j?i:j;
-min=min<len-i-1?min:len-1-i; min=min<len-j-1?min:len-1-j; printf("%d ",n-min);
+min=min<len-i-1?min:len-1-i;
+min=min<len-j-1?min:len-1-j;
+printf("%d ",n-min);
 }
 printf("\n");
 }
@@ -222,6 +270,8 @@ return 0;
 ```
 
 Output:
+
+
 <img width="158" alt="image" src="https://github.com/user-attachments/assets/d22e1c48-71a9-4f6f-8a62-895b65ae2fdd" />
 
 
@@ -231,6 +281,8 @@ Output:
 
 
 Result:
+
+
 Thus, the program is verified successfully
 
 EXP NO:10 C PROGRAM TO FIND A SQUARE  OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE
@@ -285,6 +337,7 @@ Output:
 
 
 Result:
+
 Thus, the program is verified successfully
 
 
